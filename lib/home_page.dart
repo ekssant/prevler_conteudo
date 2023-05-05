@@ -19,30 +19,32 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.local_hospital),
-            label: 'Lesões',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            label: 'Conteúdo',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.fitness_center),
-            label: 'Exerc.',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.indigo,
-        onTap: _onItemTapped,
+    return Material(
+      child: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.local_hospital),
+              label: 'Lesões',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.book),
+              label: 'Conteúdo',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.sports_gymnastics),
+              label: 'Exerc.',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.indigo,
+          onTap: _onItemTapped,
+        ),
       ),
     );
   }
